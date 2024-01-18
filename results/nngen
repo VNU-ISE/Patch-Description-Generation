@@ -6059,3 +6059,4 @@ Bring back the smileys - part II
 Tidy up space indents
 Only allow admins to load the shell module
 fix two memory leaks which occured when one used filters.
+Fix timestamp computation when using pcapng.
