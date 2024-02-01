@@ -1,4 +1,4 @@
-# FiMeGen: Automated Message Generation for Bug-Fixing Commits Leveraging Specialized Contexts and Code-Change-to-Text Translation Models
+# Automated Description Generation for Software Patches
 
 ## Environment
 ```
