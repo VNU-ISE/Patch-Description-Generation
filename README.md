@@ -10,15 +10,7 @@ conda create -n PATCHEXPLAINER python=3.10.12 -y
 conda activate PATCHEXPLAINER
 pip install torch==2.0.1 transformers==4.34.1 datasets==2.14.5 accelerate==0.21.0 bitsandbytes==0.41.1 scipy==1.11.3 peft==0.4.0 sentencepiece==0.1.99 tqdm==4.66.1
 ```
-## Empirical Study
-| **Information** | **Percentage** |
-|------------------:|-----------------------:|
-| Where         | 72,87%                  | 
-| How         | 54,57%                  | 
-| What         | 21,06%                  | 
-| At least one         | 88,98%                  | 
 
-[Manually investigate details](https://docs.google.com/spreadsheets/d/15tZDQ3lBqBgaA-1EQ1IHrwcAbUY_Hl6iKAXlsVajyFo)
 
 ## Dataset
 [Download Link](https://www.kaggle.com/datasets/ducanger/cmg-data)
@@ -64,3 +56,24 @@ python eval.py --prd_dir output_file_path --gold_dir reference_file_path
 ```
 
 ## Results
+
+
+## Empirical Study
+
+Rule-based analysis  
+
+
+| **Information** | **Percentage** |
+|------------------:|-----------------------:|
+| Where         | 72,87%                  | 
+| How         | 54,57%                  | 
+| What         | 21,06%                  | 
+| At least one         | 88,98%                  | 
+
+
+The patch description contains information:
+* Where: if it contains the function/file/module name
+* How: if it contains at least one of ['add','fix','check','remove','delete','avoid','prevent','reject','replace']
+* What: if it contains at least one of ['mem','null','leak','overflow','injection','typo','bound','crash','unused','uninit']
+
+[Manually investigate details](https://docs.google.com/spreadsheets/d/15tZDQ3lBqBgaA-1EQ1IHrwcAbUY_Hl6iKAXlsVajyFo)
